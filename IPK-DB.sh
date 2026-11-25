@@ -2,8 +2,8 @@
 set -e
 
 BASE="https://raw.githubusercontent.com/tarek1902/mizou1984store/refs/heads/main"
-IPK="enigma2-plugin-extensions-online4tech_7.5_all.ipk"
-DEB="enigma2-plugin-extensions-online4tech_7.5_all.deb"
+IPK="enigma2-plugin-extensions-mizou1984store_5.3.0_all.ipk"
+DEB="enigma2-plugin-extensions-mizou1984store_5.3.0_all.deb"
 
 if command -v opkg >/dev/null 2>&1; then
     wget -qO "/tmp/$IPK" "$BASE/$IPK"
