@@ -1,7 +1,7 @@
 #!/bin/s
 set -e
 
-BASE="https://raw.githubusercontent.com/tarek1902/Online4Tech/refs/heads/main"
+BASE="https://raw.githubusercontent.com/tarek1902/mizou1984store/refs/heads/main"
 IPK="enigma2-plugin-extensions-online4tech_7.5_all.ipk"
 DEB="enigma2-plugin-extensions-online4tech_7.5_all.deb"
 
