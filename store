@@ -1,0 +1,38 @@
+# ============================================================
+# اوامر البلوجنات المتصلحة - بعد اوامر الباكدجات - 35 بلجن
+# ============================================================
+I "1" "MyStreamer" "https://raw.githubusercontent.com/popking159/MyStreamer/refs/heads/main/myinstaller.sh"
+I "2" "novalerdownloader" "https://raw.githubusercontent.com/popking159/novalerdownloader/refs/heads/main/myinstaller.sh"
+I "3" "AJPanel" "https://raw.githubusercontent.com/AMAJamry/AJPanel/main/installer.sh"
+I "4" "SubsSupportPro" "https://raw.githubusercontent.com/popking159/SubsSupportPro/refs/heads/main/myinstaller.sh"
+I "5" "internet-speedtest" "https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/internet-speedtest.sh"
+I "6" "EmuInstaller" "https://raw.githubusercontent.com/popking159/EmuInstaller/refs/heads/main/myinstaller.sh"
+I "7" "IPAudioPro" "https://raw.githubusercontent.com/zKhadiri/IPAudioPro-Releases-/main/installer.sh"
+I "8" "Epg-Grabber" "https://dreambox4u.com/emilnabil237/plugins/Epg-Grabber/installer.sh"
+I "9" "EmilRemovePackage" "https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/EmilRemovePackage/EmilRemovePackage.sh"
+I "10" "customchannelselection" "https://raw.githubusercontent.com/popking159/customchannelselection/refs/heads/main/myinstaller.sh"
+I "11" "crashlogviewer" "https://dreambox4u.com/emilnabil237/plugins/crashlogviewer/crashlogviewer_1.9.sh"
+I "12" "cacheflush" "https://raw.githubusercontent.com/popking159/cacheflush/refs/heads/main/myinstaller.sh"
+I "13" "bitrate" "https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/bitrate/bitrate.sh"
+I "14" "AutoZap-Recovery" "https://raw.githubusercontent.com/HBK2010/-AutoZap-Recovery-by-Ahmad-Alamri/main/installer.sh"
+I "15" "ArabicSavior" "https://raw.githubusercontent.com/popking159/ArabicSavior/refs/heads/main/myinstaller.sh"
+if [ "16" -le "$DONE" ]; then :; else WAIT_NET; cd /usr/lib/enigma2/python/Plugins/Extensions || true; rm -rf SimplySports; TRY=0; OK=0; while [ "$TRY" -lt 5 ]; do TRY=$((TRY+1)); echo "   Try $TRY/5 - SimplySports"; rm -f SimplySports.zip; wget -q --no-check-certificate --tries=1 --timeout=15 https://github.com/Ahmed-Mohammed-Abbas/SimplySports/archive/refs/heads/main.zip -O SimplySports.zip; if [ -s SimplySports.zip ]; then OK=1; break; fi; echo "   Failed - Waiting 2 sec..."; sleep 2; done; if [ "$OK" = "0" ]; then echo "== [16] SimplySports FAILED after 5 tries - SKIPPED =="; else unzip -o SimplySports.zip; mv SimplySports-main SimplySports; rm -f SimplySports.zip; echo "== [16] SimplySports Done =="; fi; echo "16" > "$P"; DONE=16; fi
+I "17" "buttonpatcher" "https://raw.githubusercontent.com/popking159/buttonpatcher/refs/heads/main/myinstaller.sh"
+I "18" "FootOnsat" "https://dreambox4u.com/emilnabil237/plugins/FootOnsat/installer.sh"
+I "19" "LunaTV" "https://raw.githubusercontent.com/popking159/LukaTV/refs/heads/main/myinstaller.sh"
+I "20" "novalerStore" "https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/novaler/novalerStore.sh"
+I "21" "ipaudioproplus" "https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/novaler/ipaudioplus.sh"
+I "22" "aglare-pli" "https://raw.githubusercontent.com/popking159/skins/refs/heads/main/aglarepli/installer.sh"
+I "23" "aglare-fhd" "https://raw.githubusercontent.com/popking159/skins/refs/heads/main/aglareatv/installer.sh"
+I "24" "RaedQuickSignal" "https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh"
+I "25" "NewVirtualKeyBoard" "https://raw.githubusercontent.com/fairbird/NewVirtualKeyBoard/main/installer.sh"
+I "26" "AutoBiss" "https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/AutoBiss/AutoBiss.sh"
+I "27" "auto-dcw-key-add" "https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/auto-dcw-key-add/auto-dcw-key-add.sh"
+I "28" "FuryBiss" "https://raw.githubusercontent.com/islam-2412/FuryBiss/refs/heads/main/fury/installer.sh"
+I "29" "hisnmuslim" "https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/hisnmuslim/hisnmuslim.sh"
+I "30" "netusagepro" "https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/netusagepro/netusagepro.sh"
+I "31" "quran" "https://raw.githubusercontent.com/emil237/quran/main/installer.sh"
+I "32" "myhits" "https://raw.githubusercontent.com/popking159/myhits/refs/heads/main/myinstaller.sh"
+I "33" "oscam-by-lenuxsat" "https://dreambox4u.com/emilnabil237/emu/oscam-by-lenuxsat/installer.sh"
+if [ "34" -le "$DONE" ]; then :; else WAIT_NET; TRY=0; OK=0; while [ "$TRY" -lt 5 ]; do TRY=$((TRY+1)); echo "   Try $TRY/5 - AutoSub"; rm -f /tmp/AutoSub.tar.gz; wget -q --no-check-certificate --tries=1 --timeout=15 -O /tmp/AutoSub.tar.gz https://raw.githubusercontent.com/HBK2010/AutoSub/main/AutoSub.tar.gz; if [ -s /tmp/AutoSub.tar.gz ]; then OK=1; break; fi; echo "   Failed - Waiting 2 sec..."; sleep 2; done; if [ "$OK" = "0" ]; then echo "== [34] AutoSub FAILED after 5 tries - SKIPPED =="; else tar xzf /tmp/AutoSub.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions; rm -f /tmp/AutoSub.tar.gz; echo "== [34] AutoSub Done =="; fi; echo "34" > "$P"; DONE=34; fi
+FIX_SUB
